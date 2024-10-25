@@ -8,9 +8,9 @@ export function detectNotificationPermissions({
 }: ComponentDict): DetectorResponse {
 
   if (userAgent.state === State.Success && android.state === State.Success){
-    const samsungBrowserUserAgant =  userAgent.value.indexOf("SamsungBrowser") !== -1
-    
-    if(android.value === true && samsungBrowserUserAgant){
+    const samsungBrowserUserAgent =  userAgent.value.indexOf("SamsungBrowser") !== -1
+
+    if(android.value === true && samsungBrowserUserAgent){
         return false
     }
   }
